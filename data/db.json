@@ -1,0 +1,309 @@
+{
+  "decks": [
+    {
+      "id": 1,
+      "name": "Rendering in React",
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
+    },
+    {
+      "name": "React Router",
+      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
+      "id": 2
+    },
+    {
+      "name": "Deck With Too Few Cards",
+      "description": "this deck is testing not having enough cards",
+      "id": 4
+    },
+    {
+      "name": "My Testing Deck!",
+      "description": "This is a sample deck for testing various things.",
+      "id": 5
+    },
+    {
+      "name": "A Deck With a Really Long Name and Description. Some Might Say Too Long",
+      "description": "This is a deck with a long description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "id": 6
+    },
+    {
+      "name": "0 Card Deck",
+      "description": "this deck has no cards.",
+      "id": 7
+    },
+    {
+      "name": "One Card Deck",
+      "description": "This deck has one card.",
+      "id": 8
+    },
+    {
+      "name": "new new!",
+      "description": "new deck!!",
+      "id": 9
+    },
+    {
+      "name": "'90s Sitcom Trivia",
+      "description": "It's time to brush up on your '90s sitcom knowledge. ",
+      "id": 10
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "front": "Differentiate between Real DOM and Virtual DOM.",
+      "back": "Virtual DOM updates are faster but do not directly update the HTML",
+      "deckId": 1
+    },
+    {
+      "id": 2,
+      "front": "How do you modify the state of a different React component?",
+      "back": "Not at all! State is visible to the component only.",
+      "deckId": 1
+    },
+    {
+      "id": 3,
+      "front": "How do you pass data 'down' to a React child component?",
+      "back": "As properties or props",
+      "deckId": 1
+    },
+    {
+      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
+      "back": "All paths. A route with no path matches all URL's",
+      "deckId": 2,
+      "id": 4
+    },
+    {
+      "front": "What does <Switch> do?",
+      "back": "Renders the first matching child <Route> ",
+      "deckId": 2,
+      "id": 5
+    },
+    {
+      "cards": [],
+      "front": "b",
+      "back": "b",
+      "deckId": 1,
+      "id": 7
+    },
+    {
+      "front": "abcdef",
+      "back": "uvwxyz",
+      "id": 8
+    },
+    {
+      "front": "card 1",
+      "back": "card 1 back",
+      "deckId": 4,
+      "id": 13
+    },
+    {
+      "front": "2",
+      "back": "2b",
+      "deckId": 4,
+      "id": 14
+    },
+    {
+      "front": "1A",
+      "back": "1B",
+      "id": 15,
+      "deckId": 5
+    },
+    {
+      "front": "2A",
+      "back": "2B",
+      "deckId": 5,
+      "id": 16
+    },
+    {
+      "front": "3A",
+      "back": "3B",
+      "deckId": 5,
+      "id": 17
+    },
+    {
+      "front": "4A",
+      "back": "4B",
+      "deckId": 5,
+      "id": 18
+    },
+    {
+      "front": "5A",
+      "back": "5B",
+      "deckId": 5,
+      "id": 19
+    },
+    {
+      "front": "6A",
+      "back": "6B",
+      "deckId": 5,
+      "id": 20
+    },
+    {
+      "front": "7A",
+      "back": "7B",
+      "deckId": 5,
+      "id": 21
+    },
+    {
+      "front": "A normal card",
+      "back": "A normal card's back",
+      "deckId": 6,
+      "id": 22
+    },
+    {
+      "front": "A card with long text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "back": "The back of a card with long text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "id": 23,
+      "deckId": 6
+    },
+    {
+      "front": "fdggh",
+      "back": "dfghd",
+      "deckId": 6,
+      "id": 24
+    },
+    {
+      "front": "dfsgs",
+      "back": "sdfgs",
+      "deckId": 6,
+      "id": 25
+    },
+    {
+      "front": "card front",
+      "back": "card back",
+      "deckId": 8,
+      "id": 26
+    },
+    {
+      "front": "hello",
+      "back": "goodbye",
+      "deckId": 9,
+      "id": 27
+    },
+    {
+      "front": "yo",
+      "back": "later",
+      "deckId": 9,
+      "id": 28
+    },
+    {
+      "front": "Where was the Will Smith’s character “born and raised” in The Fresh Prince of Bel-Air?",
+      "back": "West Philadelphia",
+      "deckId": 10,
+      "id": 29
+    },
+    {
+      "front": "What was the name of the pet monkey that Ross had during the early part of the Friends series?",
+      "back": "Marcel",
+      "deckId": 10,
+      "id": 30
+    },
+    {
+      "front": "What was the name of the main female lead in the TV show, Boy Meets World?",
+      "back": "Topanga",
+      "deckId": 10,
+      "id": 31
+    },
+    {
+      "front": "What was the catch phrase of Michelle Tanner in Full House?",
+      "back": "\"You got it, dude.\"",
+      "deckId": 10,
+      "id": 32
+    },
+    {
+      "front": "What was the name of the Jack Russell Terrier that was featured on Frasier?",
+      "back": "Eddie",
+      "deckId": 10,
+      "id": 33
+    },
+    {
+      "front": "What was the candy that Kramer dropped over the side while watching a medical procedure in Seinfeld?",
+      "back": "Junior Mints",
+      "deckId": 10,
+      "id": 34
+    },
+    {
+      "front": "What was the name of the school principle from Saved by the Bell?",
+      "back": "Mr. Belding",
+      "deckId": 10,
+      "id": 35
+    },
+    {
+      "front": "What is the catchphrase from the original TV series, The X-Files?",
+      "back": "\"The Truth is Out There\"",
+      "deckId": 10,
+      "id": 36
+    },
+    {
+      "front": "What was the name of Tim “The Toolman” Taylor’s handyman show from Home Improvement?",
+      "back": "Tool Time",
+      "deckId": 10,
+      "id": 37
+    },
+    {
+      "front": "What was the name of the restaurant that featured loose meat in the ‘90s sitcom, Roseanne?",
+      "back": "The Lanford Lunchbox",
+      "deckId": 10,
+      "id": 38
+    },
+    {
+      "front": "What was the name of Eric’s mother in the hit sitcom, That ‘70s Show?",
+      "back": "Kitty",
+      "deckId": 10,
+      "id": 39
+    },
+    {
+      "front": "What was the catchphrase of the baby in the television series, Dinosaurs?",
+      "back": "\"Not the Mama!\"",
+      "deckId": 10,
+      "id": 40
+    },
+    {
+      "front": "What was the job that Dick Soloman worked while on Earth in Third Rock From the Sun?",
+      "back": "Professor of Physics",
+      "deckId": 10,
+      "id": 41
+    },
+    {
+      "front": "What was the name of the clown character from the series, In Living Color?",
+      "back": "Homey the Clown",
+      "deckId": 10,
+      "id": 42
+    },
+    {
+      "front": "What was the name of the alter ego character for Steve Urkel from Family Matters?",
+      "back": "Stefan",
+      "deckId": 10,
+      "id": 43
+    },
+    {
+      "front": "Whose car was the Seinfeld gang looking for in the infamous parking garage episode?",
+      "back": "Kramer",
+      "deckId": 10,
+      "id": 44
+    },
+    {
+      "front": "What was the name of the song that was associated with the Carlton dance on The Fresh Prince of Bel-Air?",
+      "back": "\"It's Not Unusual\"",
+      "deckId": 10,
+      "id": 45
+    },
+    {
+      "front": "8A",
+      "back": "8B",
+      "deckId": 5,
+      "id": 46
+    },
+    {
+      "front": "alkasdjhasdf",
+      "back": "sdfsdfsadfas",
+      "deckId": 9,
+      "id": 47
+    },
+    {
+      "front": "dfdggd dfg dsfg sdfg ",
+      "back": "sdfg fdg sdfg ss",
+      "deckId": 9,
+      "id": 48
+    }
+  ]
+}
