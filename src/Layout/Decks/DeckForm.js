@@ -48,7 +48,7 @@ export default function DeckForm({ deck, formType, deckUpdated }) {
 
   return (
     <>
-      <h1>{formType} Deck</h1>
+      <h2>{formType} Deck</h2>
       <form onSubmit={handleSubmit}>
         {/*name input*/}
         <div className="form-group">

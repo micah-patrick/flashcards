@@ -35,7 +35,7 @@ export default function CardForm({ deck, formType, deckUpdated }) {
     setAlertType("success");
     setTimeout(() => {
       setAlertType("");
-    }, 3000);
+    }, 2000);
   };
 
   //show failure alert message (triggered in submit handler upon success)
@@ -43,7 +43,7 @@ export default function CardForm({ deck, formType, deckUpdated }) {
     setAlertType("danger");
     setTimeout(() => {
       setAlertType("");
-    }, 3000);
+    }, 2000);
   };
 
   //show saving alert message (triggered in submit handler upon success)

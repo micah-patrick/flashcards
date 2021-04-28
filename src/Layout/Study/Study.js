@@ -83,16 +83,46 @@ export default function Study({ deck, cards }) {
     }
   }
 
+const progressbarStyles = {
+  display: 'flex',
+  height: '.5rem',
+  overflow: 'hidden',
+  margin: '-1px'
+}
+
+
   return enoughCards ? (
     <>
-      <h1>Study: {deck.name}</h1>
+      <h2>Study: {deck.name}</h2>
+      
+      
+      
+
+
+
       <div
         className={`card mb-3 ${cardClass}`}
         style={{ maxWidth: "40rem", minHeight: "12rem" }}
       >
+
+<div style = {progressbarStyles}>
+                  <div 
+                    className="progress-bar  bg-success" 
+                    role="progressbar" 
+                    style={{width: `${(((cardNumber) / (cards.length )) + (1 / cards.length) ) * 100}%`}} 
+                    aria-valuenow={(((cardNumber) / (cards.length )) + (1 / cards.length) ) * 100}
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                  </div>
+                </div>
+
+
         <div className="card-header">{`Card ${cardNumber + 1} of ${
           cards.length
-        }`}</div>
+        }`}
+        
+        </div>
         <div className="card-body">
           <p className="card-text">{card[cardSide]} </p>
         </div>

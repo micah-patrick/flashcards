@@ -27,7 +27,7 @@ function NotFound() {
         Sorry, this page is missing.
       </div>
       {homeBtnDisplay}
-      <h1>Not Found</h1>
+      <h2>Not Found</h2>
       <br />
     </div>
   );

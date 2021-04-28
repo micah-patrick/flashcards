@@ -13,7 +13,7 @@ export default function NotEnoughCards({ deck }) {
         Not enough cards. You need at least 3 cards to study. There{" "}
         {notEnoughMessage} in this deck.
       </div>
-      <h1>Study: {deck.name}</h1>
+      <h2>Study: {deck.name}</h2>
 
       <br />
 
