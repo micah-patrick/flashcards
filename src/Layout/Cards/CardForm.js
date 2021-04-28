@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { createCard, updateCard } from "../../utils/api";
+import SubmitAlert from "../Common/SubmitAlert";
 import NotFound from "../NotFound";
 import CardList from "./CardList";
 
 //form for adding and editing cards
-export default function CardForm({ deck, formType }) {
+export default function CardForm({ deck, formType, deckUpdated }) {
   const [frontText, setFrontText] = useState("");
   const [backText, setBackText] = useState("");
   const history = useHistory();
   const cardId = Number(useParams().cardId);
   const [card, setCard] = useState({});
-  const [alert, setAlert] = useState("");
+  const [alertType, setAlertType] = useState("");
 
   //set card state variable to the card that is being edited
   useEffect(() => {
@@ -29,36 +30,25 @@ export default function CardForm({ deck, formType }) {
 
   //show success alert message (triggered in submit handler upon success)
   const showSuccessAlert = () => {
-    history.go(0);
-    setAlert(
-      <div class="badge alert-success p-2 ml-1" role="alert">
-        Your card is saved!
-      </div>
-    );
+    // history.go(0);
+    deckUpdated();
+    setAlertType("success");
     setTimeout(() => {
-      setAlert("");
+      setAlertType("");
     }, 3000);
   };
 
   //show failure alert message (triggered in submit handler upon success)
   const showFailAlert = () => {
-    setAlert(
-      <div class="badge alert-danger p-2 ml-1" role="alert">
-        This card could not be saved
-      </div>
-    );
+    setAlertType("danger");
     setTimeout(() => {
-      setAlert("");
+      setAlertType("");
     }, 3000);
   };
 
   //show saving alert message (triggered in submit handler upon success)
   const showSavingAlert = () => {
-    setAlert(
-      <div class="badge alert-warning p-2 ml-1" role="alert">
-        Saving...
-      </div>
-    );
+    setAlertType("warning");
   };
 
   //submit handler.
@@ -76,7 +66,7 @@ export default function CardForm({ deck, formType }) {
       updateCard(updatedCard)
         .then(() => {
           history.push(`/decks/${deck.id}`);
-          history.go(0);
+          deckUpdated();
         })
         .catch(() => {
           showFailAlert();
@@ -142,10 +132,10 @@ export default function CardForm({ deck, formType }) {
           <span className="oi oi-circle-check mr-2" />
           Save
         </button>
-        {alert}
+        <SubmitAlert form="card" alertType={alertType} />
       </form>
       <br />
-      <CardList cards={deck.cards} />
+      <CardList cards={deck.cards} deckUpdated={deckUpdated} />
     </>
   );
 }

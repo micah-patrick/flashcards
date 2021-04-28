@@ -17,7 +17,7 @@
     },
     {
       "name": "My Testing Deck!",
-      "description": "This is a sample deck for testing various things.",
+      "description": "This is a sample deck for testing various things.!!",
       "id": 5
     },
     {
@@ -34,11 +34,6 @@
       "name": "One Card Deck",
       "description": "This deck has one card.",
       "id": 8
-    },
-    {
-      "name": "new new!",
-      "description": "new deck!!",
-      "id": 9
     },
     {
       "name": "'90s Sitcom Trivia",
@@ -174,18 +169,6 @@
       "id": 26
     },
     {
-      "front": "hello",
-      "back": "goodbye",
-      "deckId": 9,
-      "id": 27
-    },
-    {
-      "front": "yo",
-      "back": "later",
-      "deckId": 9,
-      "id": 28
-    },
-    {
       "front": "Where was the Will Smith’s character “born and raised” in The Fresh Prince of Bel-Air?",
       "back": "West Philadelphia",
       "deckId": 10,
@@ -292,18 +275,6 @@
       "back": "8B",
       "deckId": 5,
       "id": 46
-    },
-    {
-      "front": "alkasdjhasdf",
-      "back": "sdfsdfsadfas",
-      "deckId": 9,
-      "id": 47
-    },
-    {
-      "front": "dfdggd dfg dsfg sdfg ",
-      "back": "sdfg fdg sdfg ss",
-      "deckId": 9,
-      "id": 48
     }
   ]
 }

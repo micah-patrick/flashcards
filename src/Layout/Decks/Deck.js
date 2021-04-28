@@ -3,11 +3,11 @@ import DeckCard from "./DeckCard";
 import CardList from "../Cards/CardList";
 
 // 'decks/:deckId' route. display the deck details and a list of cards.
-export default function Deck({ deck, cards }) {
+export default function Deck({ deck, cards, deckUpdated }) {
   return (
     <>
       <DeckCard deck={deck} deckView={true} />
-      <CardList cards={cards} />
+      <CardList cards={cards} deckUpdated={deckUpdated} />
     </>
   );
 }

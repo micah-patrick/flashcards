@@ -1,19 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 //Not Found displays when api promise fails, or when navigating to a page that has no route
 function NotFound() {
+
+
+  const location = useLocation().pathname;
+  console.log(location);
+
+  const [homeBtnDisplay, setHomeBtnDisplay] = useState("");
+
+  useEffect(() =>{
+    location !== "/" &&
+    setHomeBtnDisplay(
+      <Link className="btn btn-primary btn-lg mb-3 btn" to="/">
+        <span className="oi oi-home pr-2" />
+        Go Home
+      </Link>    
+    )
+  },[location])
+
+
   return (
     <div className="NotFound">
       <div className="alert alert-danger" role="alert">
         Sorry, this page is missing.
       </div>
+      {homeBtnDisplay}
       <h1>Not Found</h1>
       <br />
-      <Link className="btn btn-primary mb-3 btn" to="/">
-        <span className="oi oi-home pr-2" />
-        Go Home
-      </Link>
     </div>
   );
 }

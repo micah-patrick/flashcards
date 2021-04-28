@@ -1,10 +1,9 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { deleteCard } from "../../utils/api";
 
 //individual card componant displaying both sides and edit/ delete buttons (not what is shown when studying)
-export default function CardCard({ card }) {
-  const history = useHistory();
+export default function CardCard({ card, deckUpdated }) {
 
   //trunkate card text if longer than 150 characters.
   let trunkatedFront = card.front;
@@ -22,8 +21,7 @@ export default function CardCard({ card }) {
       "Delete this card? \n \n You will not be able to recover it.";
     if (window.confirm(message)) {
       deleteCard(card.id).then(() => {
-        history.push(`/decks/${card.deckId}`);
-        history.go(0);
+        deckUpdated();
       });
     }
   };

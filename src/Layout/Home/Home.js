@@ -8,9 +8,14 @@ import { Link } from "react-router-dom";
 //home page
 //displays a "create deck" button and a list of all the decks
 export default function Home() {
-  const [deckList, setDeckList] = useState();
   //deckListDisplay displays loading componant by default, then displays the list of decks once the decks are recieved from the api
   const [deckListDisplay, setDeckListDisplay] = useState(<Loading />);
+  const [deckList, setDeckList] = useState();
+  const [updateCount, setUpdateCount] = useState(0);
+
+  function deckListUpdated(){ 
+    setUpdateCount(updateCount + 1); 
+  };
 
   useEffect(() => {
     listDecks() //recieve decks from the database
@@ -20,11 +25,12 @@ export default function Home() {
       .catch(() => {
         setDeckListDisplay(<NotFound />); //if the api fetch fails, display NotFound componant.
       });
-  }, []);
+  }, [updateCount]);
 
   useEffect(() => {
     deckList && //set display to DeckList componant
-      setDeckListDisplay(<DeckList deckList={deckList} />);
+      setDeckListDisplay(<DeckList deckList={deckList} deckListUpdated={deckListUpdated} />);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [deckList]);
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import NotEnoughCards from "../Cards/NotEnoughCards";
 
@@ -8,8 +8,31 @@ export default function Study({ deck, cards }) {
   const enoughCards = cards.length > 2; //boolean used to determine if there are enough cards to study (there must be at least 3)
   const [cardSide, setCardSide] = useState("front"); //front or back. always start with front.
   const [nextButtonDisplay, setNextButtonDisplay] = useState(""); //next button is hidden when cardSide === 'front'
+  const [shuffledCards, setShuffledCards] = useState([...cards]);
   const [card, setCard] = useState(cards[0]); //current card object to be displayed
   const [cardClass, setCardClass] = useState("text-dark bg-light");
+
+  //on first render, shuffle the cards
+  useEffect(() => {
+    setShuffledCards(shuffle(cards))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
+  //when cards are shuffled, set first card to first shuffled card
+  useEffect(() => {
+    setCard(shuffledCards[0]);
+  },[shuffledCards])
+
+  //function to make a copy of the cards array and shuffle it
+  function shuffle(cards) {
+      const cardsToShuffle = [...cards];
+      for (let i = cardsToShuffle.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [cardsToShuffle[i], cardsToShuffle[j]] = [cardsToShuffle[j], cardsToShuffle[i]];
+      }
+      return cardsToShuffle
+  }
+
+
 
   function nextHandler() {
     //handles clicking next
@@ -17,7 +40,7 @@ export default function Study({ deck, cards }) {
       //what to do if the current card if not the last card
       setNextButtonDisplay(""); //hides the next button
       setCardSide("front"); //switches the next card to front
-      setCard(cards[cardNumber + 1]); //updates the 'card _ of _' number
+      setCard(shuffledCards[cardNumber + 1]); //updates the 'card _ of _' number
       setCardNumber(cardNumber + 1); //moves to the next card
       setCardClass("text-dark bg-light");
     } else {
@@ -28,7 +51,8 @@ export default function Study({ deck, cards }) {
         //if message is confirmed, reset the deck
         setCardSide("front");
         setCardNumber(0);
-        setCard(cards[0]);
+        setShuffledCards(shuffle(cards));
+        setCard(shuffledCards[0]);
         setNextButtonDisplay("");
         setCardClass("text-dark bg-light");
       } else {

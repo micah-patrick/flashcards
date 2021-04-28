@@ -4,7 +4,7 @@ import { deleteDeck } from "../../utils/api";
 
 //individual deck card as seen on home page and '/decks/:deckId' route (deck view)
 //deck prop passes the deck object. the deckView prop (boolean) tells if this component is being used in the deck view route or not ('/decks/:deckId')
-export default function DeckCard({ deck, deckView }) {
+export default function DeckCard({ deck, deckView, deckListUpdated }) {
   const history = useHistory();
 
   //trunkate the deck's description if being displayed on home screen and if the description is long
@@ -49,7 +49,7 @@ export default function DeckCard({ deck, deckView }) {
     if (window.confirm(message)) {
       deleteDeck(deck.id).then(() => {
         history.push("/");
-        history.go(0);
+        !deckView && deckListUpdated();
       });
     }
   };

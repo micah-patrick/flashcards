@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { createDeck, updateDeck } from "../../utils/api";
+import SubmitAlert from "../Common/SubmitAlert";
 
 //form for creating and editing decks
 //props: deck being edited (if editing) formType: (edit or create) depending on how the form is being used
-export default function DeckForm({ deck, formType }) {
+export default function DeckForm({ deck, formType, deckUpdated }) {
   //name and description of the deck (being created or edited)
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [alertType, setAlertType] = useState("");
   const history = useHistory();
 
   //if editing a deck, set the state variables to the name and description of the deck being edited
@@ -21,18 +23,25 @@ export default function DeckForm({ deck, formType }) {
   //submit handler
   const handleSubmit = (event) => {
     event.preventDefault();
+    setAlertType("warning");
     //create a new deck object using form values
     const newDeck = { name: name, description: description };
     //update the or create the new deck
     if (formType === "Edit") {
       const updatedDeck = { ...newDeck, id: deck.id };
       updateDeck(updatedDeck).then((result) => {
-        history.push(`/decks/${result.id}`);
-        history.go(0);
+        history.push(`/decks/${result.id}/success`);
+        deckUpdated();
+      })
+      .catch(() => {
+        setAlertType("danger");
       });
     } else {
       createDeck(newDeck).then((result) => {
-        history.push(`/decks/${result.id}`);
+        history.push(`/decks/${result.id}/success`);
+      })
+      .catch(() => {
+        setAlertType("danger");
       });
     }
   };
@@ -80,6 +89,7 @@ export default function DeckForm({ deck, formType }) {
           <span className="oi oi-circle-check mr-2" />
           Submit
         </button>
+        <SubmitAlert form="deck" alertType={alertType} />
       </form>
     </>
   );

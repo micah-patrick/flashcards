@@ -9,6 +9,7 @@ import Deck from "./Deck";
 import NotFound from "../NotFound";
 import CardForm from "../Cards/CardForm";
 import DeckForm from "./DeckForm";
+import SubmitAlert from "../Common/SubmitAlert";
 
 // this is the parent/ grandparent component for any component that uses decks
 // here we get the deck data from the library, show the loading screen, and don't route to child components until the deck object is loaded and ready to
@@ -20,7 +21,7 @@ export default function Decks() {
   const [cards, setCards] = useState({});
   //decksDisplay will show Loading (default), NotFound (in case of api call error), or a route switch.
   const [decksDisplay, setDecksDisplay] = useState(<Loading />);
-
+  const [updateCount, setUpdateCount] = useState(0);
   //crumbs is an object used to pass name and path information to the Breadcrumbs component
   const crumbs = {
     deck: { name: deck.name, path: `/decks/${deck.id}` },
@@ -28,6 +29,11 @@ export default function Decks() {
     editDeck: { name: "Edit Deck", path: `/decks/${deck.id}/edit` },
     newCard: { name: "Add Card", path: `/decks/${deck.id}/cards/new` },
     editCard: { name: `Edit Card`, path: `/` },
+  };
+
+
+  function deckUpdated(){ 
+    setUpdateCount(updateCount + 1); 
   };
 
   //fetch the deck data from the api and use it to set the deck and cards states.
@@ -43,7 +49,9 @@ export default function Decks() {
       }
     }
     loadData();
-  }, [deckId]);
+  }, [deckId, updateCount]);
+
+
 
   //once the deck data is gathered return the route switch
   useEffect(() => {
@@ -52,7 +60,12 @@ export default function Decks() {
         <Switch>
           <Route exact={true} path="/decks/:deckId">
             <BreadCrumbs crumbs={[crumbs.deck]} />
-            <Deck deck={deck} cards={cards} />
+            <Deck deck={deck} cards={cards} deckUpdated={deckUpdated} />
+          </Route>
+          <Route exact={true} path="/decks/:deckId/success">
+            <BreadCrumbs crumbs={[crumbs.deck]} />
+            <SubmitAlert form="deck" alertType="success" />
+            <Deck deck={deck} cards={cards} deckUpdated={deckUpdated} />
           </Route>
           <Route exact={true} path="/decks/:deckId/study">
             <BreadCrumbs crumbs={[crumbs.deck, crumbs.study]} />
@@ -60,15 +73,15 @@ export default function Decks() {
           </Route>
           <Route exact={true} path="/decks/:deckId/edit">
             <BreadCrumbs crumbs={[crumbs.deck, crumbs.editDeck]} />
-            <DeckForm deck={deck} formType={"Edit"} />
+            <DeckForm deck={deck} formType={"Edit"} deckUpdated={deckUpdated} />
           </Route>
           <Route exact={true} path="/decks/:deckId/cards/new">
             <BreadCrumbs crumbs={[crumbs.deck, crumbs.newCard]} />
-            <CardForm deck={deck} formType={"Add"} />
+            <CardForm deck={deck} formType={"Add"} deckUpdated={deckUpdated} />
           </Route>
           <Route exact={true} path="/decks/:deckId/cards/:cardId/edit">
             <BreadCrumbs crumbs={[crumbs.deck, crumbs.editCard]} />
-            <CardForm deck={deck} formType={"Edit"} cards={cards} />
+            <CardForm deck={deck} formType={"Edit"} cards={cards} deckUpdated={deckUpdated} />
           </Route>
           <Route>
             <NotFound />
