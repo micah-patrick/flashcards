@@ -80,12 +80,12 @@ export default function DeckForm({ deck, formType, deckUpdated }) {
           ></textarea>
         </div>
         {/*cancel button*/}
-        <Link className="btn btn-secondary mx-1" to="/">
+        <Link className="btn btn-secondary mx-1 mb-3" to="/">
           <span className="oi oi-circle-x mr-2" />
           Cancel
         </Link>
         {/*submit button*/}
-        <button className="btn btn-primary mx-1" type="submit">
+        <button className="btn btn-primary mx-1 mb-3" type="submit">
           <span className="oi oi-circle-check mr-2" />
           Submit
         </button>

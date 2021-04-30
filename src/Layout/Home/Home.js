@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div>
       {/* "create deck" button */}
-      <Link className="btn btn-secondary mb-3 btn-lg" to="/decks/new">
+      <Link className="btn btn-success mb-3 btn-lg" to="/decks/new">
         <span className="oi oi-plus pr-2" />
         Create Deck
       </Link>

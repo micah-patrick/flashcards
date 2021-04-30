@@ -75,7 +75,7 @@ export default function Study({ deck, cards }) {
       setCardClass("text-white bg-dark");
       setNextButtonDisplay(
         //display the next  button
-        <button onClick={nextHandler} className="btn btn-primary mx-2">
+        <button onClick={nextHandler} className="btn btn-primary mx-2 mb-3">
           Next
           <span className="oi oi-chevron-right ml-2" />
         </button>
@@ -127,7 +127,7 @@ const progressbarStyles = {
           <p className="card-text">{card[cardSide]} </p>
         </div>
       </div>
-      <button onClick={flipHandler} className="btn btn-secondary">
+      <button onClick={flipHandler} className="btn btn-secondary mb-3">
         <span className="oi oi-loop-circular mr-2" />
         Flip
       </button>

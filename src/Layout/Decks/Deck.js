@@ -7,7 +7,7 @@ export default function Deck({ deck, cards, deckUpdated }) {
   return (
     <>
       <DeckCard deck={deck} deckView={true} />
-      <CardList cards={cards} deckUpdated={deckUpdated} />
+      <CardList deck={deck} cards={cards} deckUpdated={deckUpdated} />
     </>
   );
 }

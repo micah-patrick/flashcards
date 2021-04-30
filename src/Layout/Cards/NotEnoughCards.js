@@ -24,7 +24,7 @@ export default function NotEnoughCards({ deck }) {
         <span className="oi oi-plus pr-2" />
         Add Cards
       </Link>
-      <CardList cards={deck.cards} />
+      <CardList deck={deck} cards={deck.cards} />
     </>
   );
 }
