@@ -12,8 +12,11 @@ export default function SubmitAlert({form, alertType}){
 
 
     return (
-        <div className={`alert badge mb-3 alert-${alertType} p-2 ml-1`} role="alert">
+        <>
+        <div className={`alert badge alert-${alertType} p-2 ml-1 mb-0`} role="alert">
             {alertMessage}
         </div>
+        <br />
+        </>
     )
 }

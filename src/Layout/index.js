@@ -16,7 +16,7 @@ function Layout() {
   return (
     <div>
       <Header />
-      <div className="container">
+      <div className="container pb-3">
         <Switch>
           <Route exact={true} path="/">
             {" "}

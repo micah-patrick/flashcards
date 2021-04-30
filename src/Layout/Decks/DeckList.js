@@ -11,6 +11,7 @@ export default function DeckList({ deckList, deckView, deckListUpdated }) {
         return (
           <div key={index} className="col col-12 col-lg-6 col-xl-4">
             <DeckCard deck={deck} deckView={deckView} deckListUpdated={deckListUpdated} />
+            
           </div>
         );
       })

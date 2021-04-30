@@ -44,7 +44,7 @@ export default function CardList({ deck, cards, deckUpdated }) {
 
   return (
     <>
-      <br />
+     
       {addCardsBtnDisplay}
       {cardHeadDisplay}
       <div className="row">{listAllCards}</div>

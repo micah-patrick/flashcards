@@ -53,7 +53,7 @@ export default function DeckCard({ deck, deckView, deckListUpdated }) {
 
   return (
     <>
-      <div className="card mb-4">
+      <div className="card mb-3">
         <div className="card-header bg-dark text-white pb-0">
           {/* number of cards in the deck */}
           <span className="float-right badge bg-success text-white ml-3">
