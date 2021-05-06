@@ -1,4 +1,4 @@
-![Flashcard-o-matic Discover the flashcard difference](/src/readme/readme-logo.png "Flashcard-o-matic")
+![Flashcard-o-matic Discover the flashcard difference](/src/readme/readme-header.png "Flashcard-o-matic")
 
 #
 # Flashcard-o-matic
