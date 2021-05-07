@@ -42,20 +42,24 @@ Some features that I would like to impliment in the future
 * Add different types of decks / cards (multiple choice, etc)
 * Update favicon
 #
-## SCREEN SHOTS
+## SCREENSHOTS
 
 ### Home Page:
 The home page displays a card for each deck as well as a button to create a new deck.
 
 `path = '/'`
 ![Home Page](./src/readme/scrn-sht-home.png)
+
+
 ### Study:
 Study a deck. Flip to reveal the back of a card.
 
 `path = '/decks/:deckId/study'`
-![Home Page](./src/readme/scrn-sht-study.png)
+![Study Page](./src/readme/scrn-sht-study.png)
+
+
 ### Deck View:
 Viewing a deck reveals the deck's full description, all it's associated cards and options to study, edit, or delete the deck, and add to, edit or delete the cards.
 
 `path = '/decks/:deckId'`
-![Home Page](./src/readme/scrn-sht-deck.png)
+![Deck View](./src/readme/scrn-sht-deck.png)
