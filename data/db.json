@@ -39,6 +39,11 @@
       "name": "'90s Sitcom Trivia",
       "description": "It's time to brush up on your '90s sitcom knowledge. ",
       "id": 10
+    },
+    {
+      "name": "HTTP Response Codes",
+      "description": "Study the status codes",
+      "id": 11
     }
   ],
   "cards": [
@@ -275,6 +280,162 @@
       "back": "8B",
       "deckId": 5,
       "id": 46
+    },
+    {
+      "front": "100-199",
+      "back": "Indicates an informational response; it is unlikely that you will need to return a response in this range.",
+      "deckId": 11,
+      "id": 47
+    },
+    {
+      "front": "Range: Indicates an informational response; it is unlikely that you will need to return a response in this range.",
+      "back": "100-199",
+      "deckId": 11,
+      "id": 48
+    },
+    {
+      "front": "200-299",
+      "back": "Indicates success; the request was received, understood, and successfully processed.",
+      "deckId": 11,
+      "id": 49
+    },
+    {
+      "front": "Range: Indicates success; the request was received, understood, and successfully processed.",
+      "back": "200-299",
+      "deckId": 11,
+      "id": 50
+    },
+    {
+      "front": "300-399",
+      "back": "Indicates redirection; a resource at a different URL has been substituted for the requested resource.",
+      "deckId": 11,
+      "id": 51
+    },
+    {
+      "front": "Range: Indicates redirection; a resource at a different URL has been substituted for the requested resource.",
+      "back": "300-399",
+      "deckId": 11,
+      "id": 52
+    },
+    {
+      "front": "400-499",
+      "back": "Indicates a client error; there is a problem with the way that the client submitted the request.",
+      "deckId": 11,
+      "id": 53
+    },
+    {
+      "front": "Range: Indicates a client error; there is a problem with the way that the client submitted the request.",
+      "back": "400-499",
+      "deckId": 11,
+      "id": 54
+    },
+    {
+      "front": "500-599",
+      "back": "Indicates a server error; the request was accepted, but an error on the server prevented the request's fulfillment.",
+      "deckId": 11,
+      "id": 55
+    },
+    {
+      "front": "Range: Indicates a server error; the request was accepted, but an error on the server prevented the request's fulfillment.",
+      "back": "500-599",
+      "deckId": 11,
+      "id": 56
+    },
+    {
+      "front": "200",
+      "back": "OK\tThe request is successful.",
+      "deckId": 11,
+      "id": 57
+    },
+    {
+      "front": "OK\tThe request is successful.",
+      "back": "200",
+      "deckId": 11,
+      "id": 58
+    },
+    {
+      "front": "201",
+      "back": "CREATED\tThe request resulted in a resource being successfully created.",
+      "deckId": 11,
+      "id": 59
+    },
+    {
+      "front": "CREATED\tThe request resulted in a resource being successfully created.",
+      "back": "201",
+      "deckId": 11,
+      "id": 60
+    },
+    {
+      "front": "204",
+      "back": "NO CONTENT\tThe request is successful, and nothing is being returned in the response body. DELETE operations often return this.",
+      "deckId": 11,
+      "id": 61
+    },
+    {
+      "front": "NO CONTENT\tThe request is successful, and nothing is being returned in the response body. DELETE operations often return this.",
+      "back": "204",
+      "deckId": 11,
+      "id": 62
+    },
+    {
+      "front": "400",
+      "back": "BAD REQUEST\tThe server cannot process the request because of bad syntax, invalid data, excessive size, or another client error.",
+      "deckId": 11,
+      "id": 63
+    },
+    {
+      "front": "BAD REQUEST\tThe server cannot process the request because of bad syntax, invalid data, excessive size, or another client error.",
+      "back": "400",
+      "deckId": 11,
+      "id": 64
+    },
+    {
+      "front": "403",
+      "back": "FORBIDDEN\tThe client does not have permission to access this resource.",
+      "deckId": 11,
+      "id": 65
+    },
+    {
+      "front": "FORBIDDEN\tThe client does not have permission to access this resource.",
+      "back": "403",
+      "deckId": 11,
+      "id": 66
+    },
+    {
+      "front": "404",
+      "back": "NOT FOUND\tThe resource could not be found at this time. It may have been deleted or does not exist yet.",
+      "deckId": 11,
+      "id": 67
+    },
+    {
+      "front": "NOT FOUND\tThe resource could not be found at this time. It may have been deleted or does not exist yet.",
+      "back": "404",
+      "deckId": 11,
+      "id": 68
+    },
+    {
+      "front": "405",
+      "back": "METHOD NOT ALLOWED\tThe HTTP method is not supported by the target resource.",
+      "deckId": 11,
+      "id": 69
+    },
+    {
+      "front": "METHOD NOT ALLOWED\tThe HTTP method is not supported by the target resource.",
+      "back": "405",
+      "deckId": 11,
+      "id": 70
+    },
+    {
+      "front": "500",
+      "back": "INTERNAL SERVER ERROR\tThe generic answer for an unexpected failure if there is no more specific information available.",
+      "deckId": 11,
+      "id": 71
+    },
+    {
+      "front": "INTERNAL SERVER ERROR\tThe generic answer for an unexpected failure if there is no more specific information available.",
+      "back": "500",
+      "deckId": 11,
+      "id": 72
     }
   ]
 }

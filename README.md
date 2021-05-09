@@ -40,6 +40,7 @@ Some features that I would like to impliment in the future
 * Get server up and running
 * Grading. Track right/ wrong answers while studying
 * Add different types of decks / cards (multiple choice, etc)
+* Double sided deck option
 * Update favicon
 #
 ## SCREENSHOTS
