@@ -14,7 +14,6 @@ Thinkful student project built using React and Bootstrap. Users can create decks
 * Bootstrap
 * React Router
 * React Hooks (useState, useEffect)
-* Datasets are stored on a JSON RESTful API 
 
 #
 ## FEATURES BEYOND THE SCOPE OF THE PROJECT
